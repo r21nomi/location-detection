@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>スマホ空間位置トラッキング</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #status {
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .data-container {
+      margin-bottom: 15px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    #position-display {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+<h1>スマホ空間位置トラッキング</h1>
+<div id="status">センサーへのアクセス許可が必要です</div>
+
+<button id="start-tracking">トラッキング開始</button>
+
+<div class="data-container">
+  <h2>加速度データ</h2>
+  <div id="acceleration">
+    X: 0 m/s², Y: 0 m/s², Z: 0 m/s²
+  </div>
+</div>
+
+<div class="data-container">
+  <h2>回転データ</h2>
+  <div id="rotation">
+    α: 0°, β: 0°, γ: 0°
+  </div>
+</div>
+
+<div class="data-container">
+  <h2>相対位置</h2>
+  <div id="position-display">
+    X: 0 m, Y: 0 m, Z: 0 m
+  </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
